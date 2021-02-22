@@ -1,0 +1,94 @@
+.dashboard{
+  padding: 90px;
+  @include respond(tab-land) {
+    padding: 20px!important;
+  }
+  @include respond(tab-port) {
+    padding: 0px!important;
+  }
+  &__container{
+    padding: 40px;
+    @include respond(tab-land) {
+      padding: 20px;
+      padding-top: 40px;
+    }
+    h1{
+      font-size: 6rem;
+      color: white;
+      @include respond(tab-land) {
+        margin-top: 40px;
+      }
+    }
+    &__table{
+      padding: 20px;
+      margin-top: 20px;
+      @include respond(tab-land) {
+        margin-top: 70px;
+      }
+      table{
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        td{
+          @include respond(phone) {
+            padding: 30px!important;
+          }
+         span{
+          i{
+            margin-left: 20px;
+            &:hover{
+              color: $color-primary;
+              transform: scale(1.2);
+              
+            }
+            @include respond(tab-land) {
+              font-size: 2rem!important;
+              margin-left: 10px;
+            }
+            @include respond(phone) {
+              margin-left: 0px;
+            }
+          }
+           a{
+             padding: 10px 20px;
+             background-color: $color-primary;
+             border-radius: 10px;
+             cursor: pointer;
+             &:hover{
+               background-color: $color-secondary;
+             }
+             @include respond(tab-port) {
+              padding: 10px!important;
+            }
+            @include respond(phone) {
+              padding: 10px!important;
+              display: none;
+            }
+            
+           }
+         }
+        }
+        td,th{
+          border: 1px solid #ddd;
+          padding: 15px;
+          font-size: 1.7rem;
+        }
+        tr:nth-child(even){background-color: white;
+          
+          th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+            
+          }
+      }
+      }
+       
+    }
+    }
+  }
+tr:nth-child(odd){
+  background-color: gray;
+}

@@ -1,0 +1,286 @@
+.movie{
+  display: flex;
+  
+  height: 75vh;
+  padding: 30px;
+  position: relative;
+  @include respond(tab-land) {
+    height: 65vh;
+  }
+  @include respond(phone) {
+    height: 65vh;
+    padding: 5px;
+  }
+ 
+  &__stats{
+    margin-left: 40px;
+    margin-top: 90px;
+    padding: 10px;
+    @include respond(phone) {
+      margin-left: 10px;
+    }
+    h1{
+      color: white;
+      font-size: 6rem;
+      @include respond(phone) {
+        font-size: 3.4rem;
+      }
+    }
+    &__rating{
+      margin-top: 10px;
+      i{
+        color: gold;
+        margin-left: 7px;
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+      }
+      i:first-of-type{
+        margin-left: 0px;
+      }
+    }
+    h3{
+      font-size: 4rem;
+      color: white;
+      margin-top: 13px;
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+    h4{
+      font-size: 3rem;
+      color: white;
+      margin-top: 13px;
+      font-weight: 300;
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+    &__buttons{
+      a{
+        color: white;
+        border: 1px solid white;
+        padding: 20px 30px;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        background-color: transparent;
+        cursor: pointer;
+        margin-left: 15px;
+        a:first-of-type{
+          margin-left: 0px!important;
+        }
+        @include respond(phone) {
+          padding: 10px 15px;
+        }
+      }
+      a:hover{
+        background-color: $color-primary;
+        border: none;
+      }
+    }
+  }
+}
+.direct{
+  margin-bottom: 40px;
+}
+
+.showing__times{
+  padding: 70px!important;
+  margin-top: 40px;
+  @include respond(phone) {
+    padding: 20px!important;
+  margin-top: 10px;
+  }
+  h1{
+    font-size: 6rem;
+    color: $color-primary;
+    margin-bottom: 40px;
+    @include respond(phone) {
+     font-size: 3.5rem;
+    }
+  }
+  &__time{
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    //margin-bottom: 20px;
+   
+    justify-content: space-between;
+    &__datetime{
+      display: flex;
+      align-items: flex-start;
+    justify-content: space-between;
+    @include respond(phone) {
+      flex-direction: column;
+    }
+    h4{
+      margin-right: 300px;
+      font-size: 2rem;
+      color: white;
+      @include respond(tab-land) {
+        margin-right: 200px;
+      }
+      @include respond(tab-port) {
+        margin-right: 100px;
+      }
+      @include respond(phone) {
+        margin-right: 10px;
+        font-size: 1.6rem;
+      }
+    }
+    }
+    &__button{
+      a{
+        color: white;
+        border: 1px solid white;
+        padding: 20px 30px;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        background-color: transparent;
+        cursor: pointer;
+        margin-left: 15px;
+        a:first-of-type{
+          margin-left: 0px!important;
+        }
+        @include respond(phone) {
+          font-size: 1rem;
+          margin-left: 0px;
+          padding: 8px 10px;
+          margin-left: -15px;
+        }
+      }
+      a:hover{
+        background-color: $color-primary;
+        border: none;
+      }
+    }
+  }
+}
+
+.review{
+  padding: 50px;
+  max-width: 1100px;
+  margin: auto;
+  &__container{
+    padding:10px;
+    h1{
+      font-size: 6rem;
+      color: white;
+      margin-bottom: 60px;
+      @include respond(phone) {
+        font-size: 3.5rem;
+      }
+    }
+    &__review{
+      padding-bottom: 30px;
+      margin-top: 20px;
+      border-bottom: 1px solid gray;
+     width: 50%;
+     @include respond(phone) {
+     padding-bottom: 10px;
+     width: 100%;
+    }
+      h3{
+        font-size: 3rem;
+        color: white;
+        @include respond(phone) {
+         font-size: 2rem;
+         }
+      }
+      &__rating{
+        margin-top: 15px;
+        i{
+          color: gold;
+        }
+
+      }
+      h4{
+        margin-top: 20px;
+        color: white;
+        font-size: 2rem;
+        @include respond(phone) {
+          font-size: 1.5rem;
+          }
+      }
+      p{
+        font-size: 2.5rem;
+        color: white;
+        margin-top: 20px;
+      }
+    }
+    &__review:last-of-type{
+      border: none;
+    }
+    .review__form{
+      padding: 10px;
+      form{
+        h1{
+          margin-top: 30px;
+          @include respond(phone) {
+            font-size: 2.5rem;
+            }
+        }
+        label{
+          font-size: 2.5rem;
+          color: white;
+          margin-right: 30px;
+        }
+        select{
+          padding: 10px;
+          margin-bottom: 30px;
+        }
+        button{
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+        }
+        button:hover{
+          background-color: $color-primary;
+        }
+      }
+    }
+  }
+}
+.modal {
+   display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  border-radius: 15px;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border: 1px solid #888;
+  width: 37%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

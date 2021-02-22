@@ -1,0 +1,41 @@
+footer{
+  background-color: black;
+  padding: 40px;
+  @include respond(phone) {
+   padding: 15px;
+  }
+  .footer__container{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__one,
+    &__two,
+    &__three{
+      padding: 20px;
+      ul{
+        display: flex;
+        flex-direction: column;
+        height: inherit;
+        justify-content: space-between;
+        li{
+          padding: 10px;
+          margin-bottom: 5px!important;
+        }
+        li a{
+          color: gray;
+          font-size: 2rem;
+          
+          cursor: pointer;
+
+        }
+      }
+    }
+  }
+}

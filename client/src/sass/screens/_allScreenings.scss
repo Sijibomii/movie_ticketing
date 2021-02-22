@@ -1,0 +1,13 @@
+.all__screenings{
+  padding: 70px;
+  @include respond(tab-land) {
+    padding: 10px;
+    padding-top: 30px;
+    
+  }
+  @include respond(phone) {
+    padding: 0px;
+    padding-top: 50px;
+    
+  }
+}

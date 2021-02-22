@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+li{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+html {
+    font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(phone) {
+        font-size: 80%;
+    }
+}
+.red{
+    color: #e50914!important;
+}
+body {
+  box-sizing: border-box;
+  font-family: bebas-neue, sans-serif;
+    background-color:$color-tertiary;
+  @include respond(tab-port) {
+      padding: 0;
+  }
+}
+.d-sm-none{
+    @include respond(phone) {
+        display: none;
+    }
+}

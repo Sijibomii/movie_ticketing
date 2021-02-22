@@ -1,0 +1,106 @@
+.cart{
+  padding: 80px;
+  @include respond(tab-port) {
+    padding: 10px;
+    padding-top: 90px;
+  }
+  &__container{
+    padding: 40px;
+    @include respond(tab-port) {
+      padding: 20px;
+    }
+    @include respond(phone) {
+      // padding-right: 40px;
+      padding: 0px;
+      padding-right: 40px;
+    }
+    h1{
+      font-size: 6rem;
+      color: white;
+      margin-bottom: 40px;
+      @include respond(tab-port) {
+        font-size: 3rem;
+      }
+      @include respond(phone) {
+       margin-left: 30px;
+      }
+    }
+    &__item{
+      padding: 30px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      width: 50%;
+
+      border-radius: 15px;
+      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+
+      justify-content: space-between;
+      @include respond(tab-port) {
+        width: 65%;
+      }
+      @include respond(tab-land) {
+        width: 85%;
+        margin-left: 25px;
+      }
+      @include respond(phone) {
+        padding: 25px;
+        width: 100%;
+            }
+      &__bottom{
+        i{
+          margin-right: 20px;
+          cursor: pointer;
+          color: $color-primary;
+          @include respond(tab-land) {
+            font-size: 3rem;
+          }
+          @include respond(phone) {
+            font-size: 2rem;
+          }
+        }
+      }
+      &__top{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h2{
+          font-size: 2.3rem;
+          color: white;
+          margin-bottom: 5px;
+          @include respond(phone) {
+            font-size: 1.4rem;
+            padding: 0px;
+          }
+        }
+        h3{
+          font-size: 1.8rem;
+          color: white;
+          margin-bottom: 5px;
+          @include respond(tab-land) {
+            font-size: 2.1rem;
+          }
+          @include respond(phone) {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+          }
+        }
+        h4{
+          font-size: 1.4rem;
+          color: white;
+          @include respond(tab-land) {
+            font-size: 2.1rem;
+          }
+          @include respond(phone) {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.ReactModal__Overlay{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85))!important;
+}

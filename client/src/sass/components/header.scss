@@ -1,0 +1,123 @@
+.header{
+  background-color: transparent;
+  padding: 10px;
+  max-width: 1300px;
+  margin: auto ;
+  height: 80px;
+  z-index: 3;
+  position: absolute;
+  top: 0px;
+ left: 50px;
+ width: 100%;
+ @include respond(tab-land) {
+  max-width: 900px;
+}
+
+@include respond(tab-port) {
+  max-width: 600px;
+}
+@include respond(phone) {
+  max-width: 300px;
+}
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+  &__logo{
+    h1{
+      font-size: 4.5rem;
+      color: $color-secondary;
+      cursor: pointer;
+      font-weight: 700;
+      @include respond(phone) {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-left: -40px;
+      }
+    }
+  }
+  &__links{
+    display: flex;
+    margin-right:20px ;
+    padding: 10px;
+    &__input{
+      padding: 10px;
+      margin-right: 40px;
+      @include respond(phone) {
+        padding: 0px;
+      }
+      // border: 1px solid white;
+      i{
+        color: white;
+        //margin-left: 20px;
+      }
+      input[type=text] {
+        width: 130px;
+        color: white;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        margin-right: 30px;
+        background: transparent;
+        padding: 10px;
+        border: none;
+        // transform: rotate(360deg) scaleX(-1);
+        @include respond(phone) {
+         width: 90px;
+         padding: 5px;
+         margin-right: 5px;
+         margin-left: 20px;
+        }
+        
+        margin-left: -50px;
+
+      }
+      /* When the input field gets focus, change its width to 100% */
+      input[type=text]:focus {
+        border: 1px solid transparent!important;
+        width: 100%;
+        color: none;
+        @include respond(phone) {
+         width: 40%;
+         }
+      }
+    }
+    ul{
+      display: flex;
+      align-items: center;
+      a{
+        margin-left: 25px;
+        display: flex;
+        h2{
+          color: white;
+        }
+        i{
+          margin-left: 5px;
+          color: white;
+        }
+      }
+      li{
+        padding: 10px;
+        margin-left: -20px;
+        background-color: $color-primary;
+        border-radius: 10%;
+        cursor: pointer;
+        &:hover{
+          background-color: $color-secondary;
+        }
+        @include respond(tab-port) {
+          margin-right: -60px;
+        }
+        @include respond(phone) {
+          padding: 5px;
+        }
+        
+      }
+    }
+  }
+
+}
+.logout{
+  margin-left: 20px!important;
+}

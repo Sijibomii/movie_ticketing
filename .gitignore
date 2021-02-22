@@ -1,0 +1,7 @@
+server/__pycache__
+server/env
+server/.env
+client/.DS_STORE
+client/node_modules
+scripts/flow/*/.flowconfig
+.flowconfig
